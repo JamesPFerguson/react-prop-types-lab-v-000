@@ -19,33 +19,33 @@ export default class Product extends React.Component {
     )
   }
 
-  Product.defaultProps = {
-    hasWatermark: false
-  }
-
-  Product.propTypes = {
-    name: PropTypes.string.isRequired,
-    producer: PropTypes.string,
-    hasWatermark: PropTypes.bool,
-    color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-    weight: function(props, weight, product)  {
-      if (weight > 300 || weight < 80) {
-        return new Error(
-          'Invalid prop `' + weight + '` supplied to' +
-          ' `' + product + '`. Validation failed.'
-        );
-      }
-    }
-  }
-
-  function(props, weight, product)  {
-    if (weight > 300 || weight < 80) {
-      return new Error(
-        'Invalid prop `' + weight + '` supplied to' +
-        ' `' + product + '`. Validation failed.'
-      );
-    }
-  }
+  // Product.defaultProps = {
+  //   hasWatermark: false
+  // }
+  //
+  // Product.propTypes = {
+  //   name: PropTypes.string.isRequired,
+  //   producer: PropTypes.string,
+  //   hasWatermark: PropTypes.bool,
+  //   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
+  //   weight: function(props, weight, product)  {
+  //     if (weight > 300 || weight < 80) {
+  //       return new Error(
+  //         'Invalid prop `' + weight + '` supplied to' +
+  //         ' `' + product + '`. Validation failed.'
+  //       );
+  //     }
+  //   }
+  // }
+  //
+  // function(props, weight, product)  {
+  //   if (weight > 300 || weight < 80) {
+  //     return new Error(
+  //       'Invalid prop `' + weight + '` supplied to' +
+  //       ' `' + product + '`. Validation failed.'
+  //     );
+  //   }
+  // }
 
 
 }
